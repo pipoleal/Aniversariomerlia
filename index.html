@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aniversário da Melia 🎂</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="container">
+    <div class="card">
+      <h1>🎉 Melia faz 1 aninho! 🎉</h1>
+
+      <p class="subtitle">
+        Você está convidado para comemorar esse dia especial com a gente 💖
+      </p>
+
+      <div class="info">
+        <p><strong>📅 Data:</strong> 22 de março</p>
+        <p><strong>⏰ Horário:</strong> 15h</p>
+        <p><strong>📍 Local:</strong> (endereço aqui)</p>
+      </div>
+
+      <hr />
+
+      <h2>Confirme sua presença</h2>
+
+      <form id="form-confirmacao">
+        <input
+          type="text"
+          id="nome"
+          placeholder="Seu nome"
+          required
+        />
+
+        <select id="presenca" required>
+          <option value="">Você vai comparecer?</option>
+          <option value="Sim">Sim, estarei lá 🎈</option>
+          <option value="Não">Infelizmente não poderei ir 😢</option>
+        </select>
+
+        <button type="submit">Confirmar presença</button>
+      </form>
+
+      <p id="mensagem-status"></p>
+    </div>
+  </main>
+
+  <script src="js/confirmacao.js"></script>
+</body>
+</html>
