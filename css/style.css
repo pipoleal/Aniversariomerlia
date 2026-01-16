@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #ccefff, #f3e8ff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 20px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.card {
+  background: linear-gradient(180deg, #ffffff, #f9f4ff);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 15px 35px rgba(0, 120, 200, 0.15);
+  text-align: center;
+  border: 2px solid #e0f4ff;
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+  color: #3a7bd5;
+}
+
+.tema {
+  font-size: 0.9rem;
+  color: #8b5fbf;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.info p {
+  font-size: 0.9rem;
+  margin: 6px 0;
+  color: #444;
+}
+
+hr {
+  margin: 22px 0;
+  border: none;
+  border-top: 1px dashed #bfe6ff;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #5aa9e6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+select {
+  padding: 11px;
+  border-radius: 10px;
+  border: 1px solid #cde7f7;
+  font-size: 0.9rem;
+  background: #ffffff;
+}
+
+button {
+  margin-top: 12px;
+  padding: 13px;
+  background: linear-gradient(135deg, #5ad7ff, #c77dff);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 6px 15px rgba(90, 215, 255, 0.4);
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(199, 125, 255, 0.5);
+}
+
+#mensagem-status {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3a7bd5;
+}
