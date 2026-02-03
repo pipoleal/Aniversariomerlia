@@ -123,3 +123,34 @@
    width: 180px;
    pointer-events: none;
  }
+
+ #oceano {
+   position: fixed;
+   inset: 0;
+   overflow: hidden;
+   z-index: 0;
+   pointer-events: none;
+ }
+
+ .sereia {
+   position: absolute;
+   width: 120px;
+   opacity: 0.25;
+   animation: flutuar linear infinite;
+ }
+
+ @keyframes flutuar {
+   from {
+     transform: translateY(100vh) translateX(0);
+   }
+
+   to {
+     transform: translateY(-200px) translateX(40px);
+   }
+ }
+
+ /* garante que o conteúdo fique acima */
+ .container {
+   position: relative;
+   z-index: 1;
+ }
