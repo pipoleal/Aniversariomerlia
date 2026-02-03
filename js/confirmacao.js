@@ -1,22 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("form-confirmacao");
-  const status = document.getElementById("mensagem-status");
+const form = document.getElementById("form-confirmacao");
+const status = document.getElementById("mensagem-status");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+const URL_BACKEND = "https://script.google.com/macros/s/AKfycbzDbEraQjDQ9MtU3cHC-lS5NdzhMqIOTPJeIfMtNuMuZNi53ywBjTeL7IcMHy1dcK-D5g/exec";
 
-    const nome = document.getElementById("nome").value.trim();
-    const presenca = document.getElementById("presenca").value;
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    if (!nome || !presenca) {
-      status.textContent = "Preencha seu nome e escolha uma opção 😊";
-      status.style.color = "red";
-      return;
-    }
+  const nome = document.getElementById("nome").value;
+  const presenca = document.getElementById("presenca").value;
 
-    status.textContent = "Presença registrada! Obrigado 💖";
-    status.style.color = "green";
+  if (!nome || !presenca) return;
 
+  status.textContent = "Enviando confirmação...";
+
+  try {
+    await fetch(URL_BACKEND, {
+      method: "POST",
+      body: JSON.stringify({ nome, presenca }),
+    });
+
+    status.textContent = "Confirmação enviada com sucesso 💖";
     form.reset();
-  });
+  } catch {
+    status.textContent = "Erro ao enviar confirmação 😢";
+  }
 });
