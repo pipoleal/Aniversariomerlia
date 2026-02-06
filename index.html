@@ -1,64 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aniversário da Melia 🎂</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convite Merlíah</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <div class="fundo-convite">
-        <img src="sereias.png" class="img-sereia">
-        <img src="golfinho.png" class="img-golfinho">
-        <img src="cavalo-marinho.png" class="img-cavalo">
+  <main class="container">
+    <div class="card">
 
-        <!-- aqui fica seu conteúdo central -->
+      <!-- IMAGENS DECORATIVAS -->
+      <img src="sereia.png" class="img-sereia">
+      <img src="golfinho.png" class="img-golfinho">
+      <img src="cavalo-marinho.png" class="img-cavalo">
+
+      <h1>🧜‍♀️ Merlíah</h1>
+      <h1 class="gold">faz 1 aninho! 🐚</h1>
+
+      <p class="tema">Merlíah em vida de sereia 🌊</p>
+
+      <p class="subtitle">
+        Você está convidado para comemorar esse dia especial com a gente 💖
+      </p>
+
+      <div class="info">
+        <p>📅 <strong>Data:</strong> 22 de março</p>
+        <p>⏰ <strong>Horário:</strong> 15h</p>
+        <p>📍 <strong>Local:</strong> Festa na entrada da maquininha N.808</p>
+      </div>
+
+      <hr>
+
+      <h2>OBS: Levar fato de banho.</h2>
+      <h2>Confirme sua presença</h2>
+
+      <form>
+        <input type="text" placeholder="Seu nome" required>
+        <select required>
+          <option value="">Você vai comparecer?</option>
+          <option>Sim 🎈</option>
+          <option>Não 😢</option>
+        </select>
+        <button type="submit">Confirmar presença</button>
+      </form>
+
     </div>
+  </main>
 
-    <main class="container">
-        <div class="card">
-            <h1>🧜‍♀️ Merlíah </h1>
-            <h1>faz 1 aninho! 🐚</h1>
-            <p class="tema">Merláh em vida de sereia🌊</p>
-
-            <p class="subtitle">
-                Você está convidado para comemorar esse dia especial com a gente 💖
-            </p>
-
-            <div class="info">
-                <p><strong>📅 Data:</strong> 22 de março</p>
-                <p><strong>⏰ Horário:</strong> 15h</p>
-                <p><strong>📍 Local:</strong> (Festa na entrada da maquininha N.808)</p>
-            </div>
-
-            <hr />
-            <h2>OBS: Levar fato de banho.</h2>
-            <h2>Confirme sua presença</h2>
-
-            <form id="form-confirmacao">
-                <input type="text" id="nome" placeholder="Seu nome" required />
-
-                <select id="presenca" required>
-                    <option value="">Você vai comparecer?</option>
-                    <option value="Sim">Sim, estarei lá 🎈</option>
-                    <option value="Não">Infelizmente não poderei ir 😢</option>
-                </select>
-
-                <button type="submit">Confirmar presença</button>
-            </form>
-            <p id="mensagem-status"></p>
-        </div>
-    </main>
-
-    <script src="js/confirmacao.js"></script>
-    <script src="js/sereias.js"></script>
 </body>
-
 </html>
