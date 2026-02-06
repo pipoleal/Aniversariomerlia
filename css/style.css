@@ -7,7 +7,7 @@
 
  body {
    min-height: 100vh;
-   background: linear-gradient(180deg, #dff3ff 0%, #f6e9ff 100%);
+   background-image: url(../../../Downloads/sereias.png);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -31,16 +31,6 @@
    box-shadow: 0 20px 40px rgba(0, 140, 200, 0.25);
    border: 6px solid transparent;
    background-clip: padding-box;
- }
-
- /* Moldura dourada */
- .card::before {
-   content: "";
-   position: absolute;
-   inset: -12px;
-   border-radius: 50%;
-   background: linear-gradient(135deg, #f9e29c, #d4af37, #f9e29c);
-   z-index: -1;
  }
 
  /* Título */
