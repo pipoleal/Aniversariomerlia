@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background: url("fundo.png") no-repeat center/cover;
+  background: url("img/sereia.png") no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
