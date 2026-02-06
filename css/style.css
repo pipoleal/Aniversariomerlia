@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background: url("sereia.png") no-repeat center/cover;
+  background-color: aquamarine;
   display: flex;
   justify-content: center;
   align-items: center;
