@@ -43,14 +43,18 @@
       <h2>OBS: Levar fato de banho.</h2>
       <h2>Confirme sua presença</h2>
 
-      <form>
-        <input type="text" placeholder="Seu nome" required>
-        <select required>
+      <form id="form-confirmacao">
+        <input type="text" id="nome" placeholder="Seu nome" required>
+
+        <select id="presenca" required>
           <option value="">Você vai comparecer?</option>
-          <option>Sim 🎈</option>
-          <option>Não 😢</option>
-          <p id="mensagem-status"></p>
+          <option value="Sim">Sim 🎈</option>
+          <option value="Não">Não 😢</option>
         </select>
+
+        <!-- Mensagem de status fora do select -->
+        <p id="mensagem-status"></p>
+
         <button type="submit">Confirmar presença</button>
       </form>
 

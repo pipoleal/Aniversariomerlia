@@ -1,29 +1,31 @@
-var form = document.getElementById("form-confirmacao");
-var status = document.getElementById("mensagem-status");
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("form-confirmacao");
+  var status = document.getElementById("mensagem-status");
 
-var URL_BACKEND =
-  "https://script.google.com/macros/s/AKfycbyLiEx4oaYcxoaweXgga4erKZerYrh993vdq9mzgFjKrr86FK3Qilo4IE0tm3AtlfQDnw/exec";
+  var URL_BACKEND = "https://script.google.com/macros/s/AKfycbyLiEx4oaYcxoaweXgga4erKZerYrh993vdq9mzgFjKrr86FK3Qilo4IE0tm3AtlfQDnw/exec";
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  if (!form) return;
 
-  var nome = document.getElementById("nome").value;
-  var presenca = document.getElementById("presenca").value;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  if (!nome || !presenca) return;
+    var nome = document.getElementById("nome").value;
+    var presenca = document.getElementById("presenca").value;
 
-  status.textContent = "Enviando confirmação...";
+    if (!nome || !presenca) return;
 
-  fetch(
-    URL_BACKEND +
-      "?nome=" + encodeURIComponent(nome) +
-      "&presenca=" + encodeURIComponent(presenca)
-  )
-    .then(function () {
-      status.textContent = "Confirmação enviada com sucesso";
-      form.reset();
-    })
-    .catch(function () {
-      status.textContent = "Erro ao enviar confirmação";
-    });
+    status.textContent = "Enviando confirmação...";
+
+    fetch(
+      URL_BACKEND + "?nome=" + encodeURIComponent(nome) + "&presenca=" + encodeURIComponent(presenca)
+    )
+      .then(function (res) {
+        status.textContent = "Confirmação enviada com sucesso 💖";
+        form.reset();
+      })
+      .catch(function (err) {
+        console.log(err);
+        status.textContent = "Erro ao enviar confirmação 😢";
+      });
+  });
 });
